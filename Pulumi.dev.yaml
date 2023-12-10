@@ -1,0 +1,7 @@
+config:
+  aaaaaaa-app:appPath: ./app
+  aaaaaaa-app:errorDocument: error.html
+  aaaaaaa-app:indexDocument: index.html
+  aaaaaaa-app:sitePath: ./wwwroot
+  gcp:project: pulumi-407702
+  gcp:region: us-central1
