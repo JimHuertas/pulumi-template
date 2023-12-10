@@ -1696,6 +1696,117 @@ Managed to automate deploying a website created with said builder with @PulumiCo
         </div>
     </div>
 </section>
+<section class="mb-8 p-6 lg:px-0 relative home-page-section">
+    <div class=home-page-build-section-background>
+        <div class=home-page-build-section-image></div>
+    </div>
+    <div class="container mx-auto z-10 relative">
+        <div class="w-full lg:w-2/3 mx-auto">
+            <div class=text-center>
+                <h3>Descarga e instalación</h3>
+                <p class=text-lg>Author infrastructure code using programming languages you know and love. Write statements to define infrastructure using your IDE with autocomplete, type checking, and documentation.</p>
+            </div>
+            <div class="card bg-white shadow-xl p-6 block">
+                <div>
+                    <pulumi-chooser type=language options=macos,linux,windows>
+                        <pulumi-choosable type=language class=highlight value=macos>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        
+                            <ul>
+                                <li>
+                                    <p class="no-anchor pt-4">Homebrew Package Manager</p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>brew install pulumi/tap/pulumi</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4">macOS Binary Download</p>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4">Community Homebrew</p>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://www.macports.org/">Administrador de paquetes MacPorts</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>sudo port install pulumi</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4">Puede ejecutar un script de instalación.</p>
+                                </li>
+                            </ul>
+
+                        </pulumi-choosable>
+                        <pulumi-choosable type=language class=highlight value=windows>
+                            <ul>
+                                <li>Installer (MSI)</li>
+                                <li>Windows Binary Download</li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://chocolatey.org/">Chocolatey package manager</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>choco install pulumi</span></span></code></pre>
+                                        <div class="copy-button-container">    <pulumi-tooltip>
+                                            <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                            <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                            <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                        </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://github.com/microsoft/winget-cli/">Windows Package Manager</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>winget install pulumi</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://github.com/pulumi/pulumi-winget/releases/download/v3.96.2/pulumi-3.96.2-windows-x64.msi">Pulumi Installer for Windows x64</a></p>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://get.pulumi.com/releases/sdk/pulumi-v3.96.2-windows-x64.zip">Pulumi 3.96.2 binaries for Windows x64</a></p>
+                                </li>
+                            </ul>
+                        </pulumi-choosable>
+                        <pulumi-choosable type=language class=highlight value=linux>
+                            <ul>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://github.com/microsoft/winget-cli/">Script de instalación</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>curl -fsSL https://get.pulumi.com | sh</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>Instalacion manual: <a href="https://get.pulumi.com/releases/sdk/pulumi-v3.96.2-linux-x64.tar.gz">Prebuilt binary for Linux</a></li>
+                            </ul>
+                        </pulumi-choosable>
+                    </pulumi-chooser>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto z-10 relative">
+        <div class="w-full lg:w-2/3 mx-auto">
+            <div class=text-center>
+                <h3>Verificar instalación</h3>
+                <p class=text-lg>Después de instalar Pulumi, verifique que todo funcione correctamente ejecutando la CLI:</p>
+            </div>
+            <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>pulumi version <br/>  v3.96.2</span></span></code></pre>
+                <div class="copy-button-container">    <pulumi-tooltip>
+                    <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                    <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                    <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                </div>
+        </div>
+    </div>
+</section>
 <section class="container mx-auto my-24 px-6">
     <div class="flex justify-center">
         <div class="card ready-cta w-full rounded-xl p-1 gradient">

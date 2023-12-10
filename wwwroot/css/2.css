@@ -565,6 +565,24 @@ body .btn-secondary-home-action:focus {
     width: 100%
 }
 
+section p a:not(.btn-secondary), ul li a[href] {
+    background: linear-gradient(90deg,hsla(233,4%,57%,0),hsla(233,4%,57%,0)),linear-gradient(90deg,#8e8f97,#8e8f97);
+    background-position: 100% 100%,0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% .1em,0 .1em;
+    color: #4d5bd9;
+    padding-bottom: .2rem;
+    transition: background-size .3s;
+    transition-timing-function: ease-in
+}
+
+a:hover {
+    color: #364098;
+    text-decoration: #8e8f97 solid underline;
+    text-underline-offset: 6px
+}
+
+
 @media (min-width: 1024px) {
     .lg\:container {
         width:100%
