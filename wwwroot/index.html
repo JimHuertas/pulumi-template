@@ -1696,164 +1696,566 @@ Managed to automate deploying a website created with said builder with @PulumiCo
         </div>
     </div>
 </section>
-<section class="container mx-auto my-24 px-6">
-    <div class="flex justify-center">
-        <div class="card ready-cta w-full rounded-xl p-1 gradient">
-            <div class="flex justify-center rounded-xl bg-purple-100">
-                <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
-                    <h2 class="mb-12 text-center">Ready to try Pulumi?</h2>
-                    <div class="flex flex-col lg:flex-row self-stretch items-center lg:justify-between">
-                        <div class="flex flex-col justify-center align-center text-center lg:ml-14 lg:mr-4 mb-14 lg:mb-0 z-0">
-                            <a href=/docs/get-started/ class="btn-primary py-3">Get Started</a>
-                            <p class="text-xs pt-1 my-0">Follow the step-by-step guide</p>
-                        </div>
-                        <div class="flex flex-col justify-center align-center text-center lg:mr-14 lg:ml-4">
-                            <a href=docs/install/ class="btn-secondary py-3 px-6 whitespace-nowrap">Download Open Source</a>
-                            <p class="text-xs pt-1 my-0">Download our open source SDK</p>
-                        </div>
-                    </div>
+<section class="mb-8 p-6 lg:px-0 relative home-page-section">
+    <div class=home-page-build-section-background>
+        <div class=home-page-build-section-image></div>
+    </div>
+    <div class=text-center>
+        <h3><span class="rainbow-text" data-text="Despliege de Stack">Descarga e instalación</span></h3>
+    </div>
+    <div class="container mx-auto z-10 relative">
+        <div class="w-full lg:w-2/3 mx-auto">
+            <div class=text-center>
+                <p class=text-lg>Pulumi esta disponible en 3 plataformas de ordenador</p>
+                <br/><br/>
+            </div>
+            <div class="card bg-white shadow-xl p-6 block">
+                <div>
+                    <pulumi-chooser type=language options=macos,linux,windows>
+                        <pulumi-choosable type=language class=highlight value=macos>                        
+                            <ul>
+                                <li>
+                                    <p class="no-anchor pt-4">Homebrew Package Manager</p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>brew install pulumi/tap/pulumi</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4">macOS Binary Download</p>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4">Community Homebrew</p>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://www.macports.org/">Administrador de paquetes MacPorts</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>sudo port install pulumi</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4">Puede ejecutar un script de instalación.</p>
+                                </li>
+                            </ul>
+
+                        </pulumi-choosable>
+                        <pulumi-choosable type=language class=highlight value=windows>
+                            <ul>
+                                <li>Installer (MSI)</li>
+                                <li>Windows Binary Download</li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://chocolatey.org/">Chocolatey package manager</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>choco install pulumi</span></span></code></pre>
+                                        <div class="copy-button-container">    <pulumi-tooltip>
+                                            <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                            <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                            <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                        </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://github.com/microsoft/winget-cli/">Windows Package Manager</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>winget install pulumi</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://github.com/pulumi/pulumi-winget/releases/download/v3.96.2/pulumi-3.96.2-windows-x64.msi">Pulumi Installer for Windows x64</a></p>
+                                </li>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://get.pulumi.com/releases/sdk/pulumi-v3.96.2-windows-x64.zip">Pulumi 3.96.2 binaries for Windows x64</a></p>
+                                </li>
+                            </ul>
+                        </pulumi-choosable>
+                        <pulumi-choosable type=language class=highlight value=linux>
+                            <ul>
+                                <li>
+                                    <p class="no-anchor pt-4"><a href="https://github.com/microsoft/winget-cli/">Script de instalación</a></p>
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>curl -fsSL https://get.pulumi.com | sh</span></span></code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>Instalacion manual: <a href="https://get.pulumi.com/releases/sdk/pulumi-v3.96.2-linux-x64.tar.gz">Prebuilt binary for Linux</a></li>
+                            </ul>
+                        </pulumi-choosable>
+                    </pulumi-chooser>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container mx-auto z-10 relative mt-16">
+        <div class="w-full lg:w-2/3 mx-auto">
+            <div class=text-center>
+                <p class=text-lg>Después de instalar Pulumi, verifique que todo funcione correctamente ejecutando la CLI:</p>
+            </div>
+            <div class="highlight mt-8"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>pulumi version <br/>  v3.96.2</span></span></code></pre>
+                <div class="copy-button-container">    <pulumi-tooltip>
+                    <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                    <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                    <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                </div>
+        </div>
+    </div>
 </section>
+<section class="w-full md:w-2/3 lg:w-1/2 mx-auto mt-16 px-6">
+    <div class="container text-center mx-auto">
+        <p class="text-xl description">
+            Pulumi admite diversos lenguajes de programación para administrar infraestructura.
+        </p>
+    </div>
+</section>
+<section class="container mx-auto text-center overflow-hidden px-3 mt-16">
+    <div class="w-full order-first pb-16 items-center justify-center  lg:block">
+        <pulumi-swiper slides=6 centered-slides=true loop=true autoplay autoplay-delay=500 speed=2000>
+            <pulumi-swipeable>
+                <div class="p-3 flex flex-col flex-grow items-end h-24 justify-center">
+                    <span class="customer-logo w-full h-full flex m-auto">
+                        <img class="w-full h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/TypeScript_Logo_%28Blue%29.svg/2560px-TypeScript_Logo_%28Blue%29.svg.png" alt=TypeScript>
+                    </span>
+                </div>
+            </pulumi-swipeable>
+            <pulumi-swipeable>
+                <div class="p-3 flex flex-col flex-grow items-end h-24 justify-center">
+                    <span class="customer-logo w-full h-full flex m-auto">
+                        <img class="w-full h-full" src="https://cdn.worldvectorlogo.com/logos/python-3.svg" alt=Python>
+                    </span>
+                </div>
+            </pulumi-swipeable>
+            <pulumi-swipeable>
+                <div class="p-3 flex flex-col flex-grow items-end h-24 justify-center">
+                    <span class="customer-logo w-full h-full flex m-auto">
+                        <img class="w-full h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1280px-Go_Logo_Blue.svg.png" alt=Go>
+                    </span>
+                </div>
+            </pulumi-swipeable>
+            <pulumi-swipeable>
+                <div class="p-3 flex flex-col flex-grow items-end h-24 justify-center">
+                    <span class="customer-logo w-full h-full flex m-auto">
+                        <img class="w-full h-full" src=https://cdn.worldvectorlogo.com/logos/c--4.svg alt=Csharp>
+                    </span>
+                </div>
+            </pulumi-swipeable>
+            <pulumi-swipeable>
+                <div class="p-3 flex flex-col flex-grow items-end h-24 justify-center">
+                    <span class="customer-logo w-full h-full flex m-auto">
+                        <img class="w-full h-full" src="https://www.vectorlogo.zone/logos/java/java-ar21.png" alt=Java>
+                    </span>
+                </div>
+            </pulumi-swipeable>
+            <pulumi-swipeable>
+                <div class="p-2 flex flex-col flex-grow items-end h-24 justify-center">
+                    <span class="customer-logo w-full h-full flex m-auto">
+                        <img class="w-full h-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Official_YAML_Logo.svg/1200px-Official_YAML_Logo.svg.png" alt=YAML>
+                    </span>
+                </div>
+            </pulumi-swipeable>
+        </pulumi-swiper>
+    </div>
+</section>
+<section class="py-12 lg:my-12 px-6 lg:px-0 relative home-page-section">
+    <div class=home-page-science-section-background>
+        <div class=home-page-science-section-image></div>
+    </div>
+    <div class="container mx-auto z-10 relative">
+        <div class="card bg-white shadow-xl p-6 w-full lg:w-2/3 mx-auto">
+            <div class=text-center>
+                <h3>Configuración</h3>
+            </div>
+            <div class="card bg-white shadow-xl p-6 block">
+                <p>
+                    Pulumi requiere credenciales de los servicios en la nube para administrar y aprovisionar recursos. 
+                </p><br/>
+                <div>
+                    <pulumi-chooser type=cloud options=aws,azure,gcp>
+                        <pulumi-choosable type=cloud class=highlight value=aws>
+                            <ul>
+                                <li>Debe utilizar una cuenta de usuario de IAM que tenga acceso programático con derechos para implementar y administrar los recursos gestionados a través de Pulumi.</li>
+                                <li>
+                                    Si ha instalado y configurado previamente la AWS CLI, Pulumi respetará y utilizará sus ajustes de configuración.
+                                </li>
+                                <li>
+                                    Si no tiene instalada la AWS CLI o planea utilizar Pulumi desde una canalización de CI/CD, recupere el ID de clave de acceso y la clave de acceso secreta y, a continuación, establezca las variables de entorno y en la estación de trabajo.
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>export AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY_ID"<br/>$ export AWS_SECRET_ACCESS_KEY="YOUR_SECRET_ACCESS_KEY"</span>
+                                        </code></pre>
+                                        <div class="copy-button-container">    <pulumi-tooltip>
+                                            <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                            <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                            <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                        </div>
+                                </li>
+                            </ul>
+                        </pulumi-choosable>
+                        <pulumi-choosable type=cloud class=highlight value=azure>
+                            <ul>
+                                <li>Pulumi puede autenticarse en Azure mediante una cuenta de usuario o entidad de servicio que tenga acceso mediante programación con derechos para implementar y administrar los recursos de Azure, se recomienda instalar la CLI de Azure y, a continuación, autorizar el acceso con una cuenta de usuario.
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>az login</span>
+                                    </code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </pulumi-choosable>
+                        <pulumi-choosable type=cloud class=highlight value=gcp>
+                            <ul>
+                                <li>Debes usar una cuenta de usuario o servicio de IAM que tenga acceso programático con derechos para implementar y administrar tus recursos de Google Cloud. Se necesitará una cuenta de usuario de IAM con permisos que puedan crear y completar un depósito de Cloud Storage. Se recomienda instalar el SDK de Google Cloud y, luego, autorizar el acceso con una cuenta de usuario. Si no está configurado para interactuar con tu proyecto de Google Cloud, configúralo con el comando con el ID del proyecto:                            
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>gcloud config set project "YOUR_GCP_PROJECT_ID"</span>
+                                    </code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                                <li>A continuación, Pulumi requiere credenciales de aplicación predeterminadas para interactuar con tus recursos de Google Cloud, así que ejecuta el comando para obtener esas credenciales:
+                                    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>gcloud auth application-default login</span>
+                                    </code></pre>
+                                    <div class="copy-button-container">    <pulumi-tooltip>
+                                        <span class="tooltip-target" aria-labelledby="e96580dd-6367-4275-bc26-04aa69ac489e">        
+                                        <button class="copy-button"><i class="far fa-copy copy"></i></button></span>
+                                        <span class="tooltip-content" role="tooltip" id="e96580dd-6367-4275-bc26-04aa69ac489e"><span slot="content">Copy</span></span></pulumi-tooltip></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </pulumi-choosable>                        
+                    </pulumi-chooser>
+                </div>
+            </div>
+            <div>
+                <br/><br/>
+                <p>
+                    Una vez configuranda las credenciales del servicio cloud. Si es la primera vez que ejecuta comandos pulumi, es posible que se le pida que inicie sesión en Pulumi Cloud. Después de iniciar sesión, la CLI procederá a guiarlo a través de la creación de un nuevo proyecto.
+                </p>
+                <ul>
+                    <li>
+                        Primero, se le pedirá un nombre y una descripción del proyecto. Pulse para aceptar los valores predeterminados o especificar nuevos valores.
+                        <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cl">This command will walk you through creating a new Pulumi project.<br/>Enter a value or leave blank to accept the (default), and press ENTER.<br/>Press ^C at any time to quit.<br/><br/>project name: (quickstart)<br/>project description: (A minimal AWS Pulumi program)<br/>Created project 'quickstart'</span>
+                        </code></pre>
+                    </li>
+                    <li>A continuación, se le pedirá un nombre de stack.
+                        <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cl">Please enter your desired stack name.<br/>To create a stack in an organization, use the format <org-name>/<stack-name> (e.g. `acmecorp/dev`).<br/>stack name: (dev)<br/>Created stack 'dev'</span>
+                        </code></pre>
+                    </li>
+                    <li>
+                        Por último, se le solicitarán algunos valores de configuración para el stack, por ejemplo la región.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-12 lg:my-12 px-6 lg:px-0 relative home-page-section">
+    <div class=text-center>
+        <h3><span class="rainbow-text" data-text="Despliege de Stack">Revisión de proyecto</</span></h3>
+        <br/><br/>
+    </div>
+    <div class="container mx-auto z-10 relative">
+        <div class="w-full lg:w-2/3 mx-auto">
+            <div><pulumi-choosable type="language" values="javascript,typescript,python,go,csharp,java" mode=""><!----><div class="active"><ul><li><code>Pulumi.yaml</code><font _mstmutation="1"> define el <a href="https://www.pulumi.com/docs/concepts/projects/" _mstmutation="1">proyecto</a>.</font></li></ul></div></pulumi-choosable></div>
+
+            <div><pulumi-choosable type="language" values="yaml" mode=""><!----><div class=""><ul><li><code>Pulumi.yaml</code><font _mstmutation="1"> define el <a href="https://www.pulumi.com/docs/concepts/projects/" _mstmutation="1">proyecto</a> y el programa Pulumi que define sus recursos del stack.</font></li></ul></div></pulumi-choosable></div><ul><li><code>Pulumi.dev.yaml</code><font _mstmutation="1"> contiene  valores de <a href="https://www.pulumi.com/docs/concepts/config/" _mstmutation="1">configuración</a> para el <a href="https://www.pulumi.com/docs/concepts/stack/" _mstmutation="1">stack</a> que se acaba de inicializar.</font></li></ul><div><pulumi-choosable type="language" values="csharp" mode=""><!----><div class=""><ul><li><code>Program.cs</code><font _mstmutation="1"> es el programa Pulumi que define sus recursos del stack.</font></li></ul></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="java" mode=""><!----><div class=""><ul><li><code>src/main/java/myproject</code><font _mstmutation="1">define la raíz del paquete Java del proyecto.</font></li></ul></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="javascript,typescript,python,go,java" mode=""><!----><div class="active"><ul><li><span><pulumi-chooser type="language" options="javascript,typescript,python,go,csharp,fsharp,visualbasic,java,yaml" option-style="none" class="inline" selection="typescript">
+                
+            <pulumi-choosable type="language" value="javascript" selection="typescript"><!----><div class=""><code>index.js</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="typescript" selection="typescript"><!----><div class="active"><code>index.ts</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="python" selection="typescript"><!----><div class=""><code><strong>main</strong>.py</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="go" selection="typescript"><!----><div class=""><code>main.go</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="csharp" selection="typescript"><!----><div class=""><code>Program.cs</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="fsharp" selection="typescript"><!----><div class=""><code>Program.fs</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="visualbasic" selection="typescript"><!----><div class=""><code>Program.vb</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="java" selection="typescript"><!----><div class=""><code>App.java</code></div></pulumi-choosable>
+            <pulumi-choosable type="language" value="yaml" selection="typescript"><!----><div class=""><code>Pulumi.yaml</code></div></pulumi-choosable></pulumi-chooser></span><font _mstmutation="1"> es el programa Pulumi que define los recursos del stack.</font></li></ul></div></pulumi-choosable></div>
+            <p><font _mstmutation="1">Revisemos el archivo </font>
+                <pulumi-choosable type="language" values="javascript,typescript,python,go,java" mode=""><!----><div class="active"><span><pulumi-chooser type="language" options="javascript,typescript,python,go,csharp,fsharp,visualbasic,java,yaml" option-style="none" class="inline" selection="typescript">
+                    <pulumi-choosable type="language" value="javascript" selection="typescript"><!----><div class=""><code>index.js</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="typescript" selection="typescript"><!----><div class="active"><code>index.ts</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="python" selection="typescript"><!----><div class=""><code><strong>main</strong>.py</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="go" selection="typescript"><!----><div class=""><code>main.go</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="csharp" selection="typescript"><!----><div class=""><code>Program.cs</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="fsharp" selection="typescript"><!----><div class=""><code>Program.fs</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="visualbasic" selection="typescript"><!----><div class=""><code>Program.vb</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="java" selection="typescript"><!----><div class=""><code>App.java</code></div></pulumi-choosable>
+                    <pulumi-choosable type="language" value="yaml" selection="typescript"><!----><div class=""><code>Pulumi.yaml</code></div></pulumi-choosable></pulumi-chooser></span><font _mstmutation="1"></font></div></pulumi-choosable>
+                </p>
+                
+                <div>                    
+                    <pulumi-chooser type="language" options="javascript,typescript,python,go,csharp,java,yaml" mode="" selection="typescript"><!----><ul></pulumi-chooser>               
+                </div>
+                <div><pulumi-choosable type="language" values="javascript" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="s2">"use strict"</span><span class="p">;</span>
+                </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">pulumi</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@pulumi/pulumi"</span><span class="p">);</span>
+                </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">aws</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@pulumi/aws"</span><span class="p">);</span>
+                </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">awsx</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"@pulumi/awsx"</span><span class="p">);</span>
+                </span></span><span class="line"><span class="cl"></span></span><span class="line"><span class="cl"><span class="c1">// Create an AWS resource (S3 Bucket)
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="s2">"my-bucket"</span><span class="p">);</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="c1">// Export the name of the bucket
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">exports</span><span class="p">.</span><span class="nx">bucketName</span> <span class="o">=</span> <span class="nx">bucket</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="058b0c76-e70c-424d-ba09-c0c6dfe486c7">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="058b0c76-e70c-424d-ba09-c0c6dfe486c7"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="typescript" mode=""><!----><div class="active"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">pulumi</span> <span class="kr">from</span> <span class="s2">"@pulumi/pulumi"</span><span class="p">;</span>
+                </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">aws</span> <span class="kr">from</span> <span class="s2">"@pulumi/aws"</span><span class="p">;</span>
+                </span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="o">*</span> <span class="kr">as</span> <span class="nx">awsx</span> <span class="kr">from</span> <span class="s2">"@pulumi/awsx"</span><span class="p">;</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="c1">// Create an AWS resource (S3 Bucket)
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">aws</span><span class="p">.</span><span class="nx">s3</span><span class="p">.</span><span class="nx">Bucket</span><span class="p">(</span><span class="s2">"my-bucket"</span><span class="p">);</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="c1">// Export the name of the bucket
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">bucketName</span> <span class="o">=</span> <span class="nx">bucket</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="a73593f0-05f5-4e7d-adcc-68ef5707f369">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="a73593f0-05f5-4e7d-adcc-68ef5707f369"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="python" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pulumi</span>
+                </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pulumi_aws</span> <span class="kn">import</span> <span class="n">s3</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="c1"># Create an AWS resource (S3 Bucket)</span>
+                </span></span><span class="line"><span class="cl"><span class="n">bucket</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">Bucket</span><span class="p">(</span><span class="s1">'my-bucket'</span><span class="p">)</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="c1"># Export the name of the bucket</span>
+                </span></span><span class="line"><span class="cl"><span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s1">'bucket_name'</span><span class="p">,</span> <span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="ce36506b-54c0-4f07-a932-de5c19abe156">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="ce36506b-54c0-4f07-a932-de5c19abe156"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="go" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nx">main</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="p">(</span>
+                </span></span><span class="line"><span class="cl">	<span class="s">"github.com/pulumi/pulumi-aws/sdk/v6/go/aws/s3"</span>
+                </span></span><span class="line"><span class="cl">	<span class="s">"github.com/pulumi/pulumi/sdk/v3/go/pulumi"</span>
+                </span></span><span class="line"><span class="cl"><span class="p">)</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+                </span></span><span class="line"><span class="cl">    <span class="nx">pulumi</span><span class="p">.</span><span class="nf">Run</span><span class="p">(</span><span class="kd">func</span><span class="p">(</span><span class="nx">ctx</span> <span class="o">*</span><span class="nx">pulumi</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span> <span class="kt">error</span> <span class="p">{</span>
+                </span></span><span class="line"><span class="cl">        <span class="c1">// Create an AWS resource (S3 Bucket)
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">bucket</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">s3</span><span class="p">.</span><span class="nf">NewBucket</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span> <span class="s">"my-bucket"</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+                </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                </span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">err</span>
+                </span></span><span class="line"><span class="cl">        <span class="p">}</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl">        <span class="c1">// Export the name of the bucket
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">ctx</span><span class="p">.</span><span class="nf">Export</span><span class="p">(</span><span class="s">"bucketName"</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">.</span><span class="nf">ID</span><span class="p">())</span>
+                </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">nil</span>
+                </span></span><span class="line"><span class="cl">	  <span class="p">})</span>
+                </span></span><span class="line"><span class="cl"><span class="p">}</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="897fa431-728d-46d0-b0e8-ca6e97a34e86">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="897fa431-728d-46d0-b0e8-ca6e97a34e86"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="csharp" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Pulumi</span><span class="p">;</span>
+                </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Pulumi.Aws.S3</span><span class="p">;</span>
+                </span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="k">return</span> <span class="k">await</span> <span class="n">Deployment</span><span class="p">.</span><span class="n">RunAsync</span><span class="p">(()</span> <span class="p">=&gt;</span>
+                </span></span><span class="line"><span class="cl"><span class="p">{</span>
+                </span></span><span class="line"><span class="cl">   <span class="c1">// Create an AWS resource (S3 Bucket)</span>
+                </span></span><span class="line"><span class="cl">   <span class="kt">var</span> <span class="n">bucket</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Bucket</span><span class="p">(</span><span class="s">"my-bucket"</span><span class="p">);</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl">   <span class="c1">// Export the name of the bucket</span>
+                </span></span><span class="line"><span class="cl">   <span class="k">return</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object?</span><span class="p">&gt;</span>
+                </span></span><span class="line"><span class="cl">   <span class="p">{</span>
+                </span></span><span class="line"><span class="cl"><span class="na">      ["bucketName"]</span> <span class="p">=</span> <span class="n">bucket</span><span class="p">.</span><span class="n">Id</span>
+                </span></span><span class="line"><span class="cl">   <span class="p">};</span>
+                </span></span><span class="line"><span class="cl"><span class="p">});</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="8b280908-96b6-4104-94a9-a1ab41c805aa">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="8b280908-96b6-4104-94a9-a1ab41c805aa"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="java" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span> <span class="nn">myproject</span><span class="o">;</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">com.pulumi.Pulumi</span><span class="o">;</span>
+                </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">com.pulumi.aws.s3.Bucket</span><span class="o">;</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="o">{</span>
+                </span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+                </span></span><span class="line"><span class="cl">        <span class="n">Pulumi</span><span class="o">.</span><span class="na">run</span><span class="o">(</span><span class="n">ctx</span> <span class="o">-&gt;</span> <span class="o">{</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl">            <span class="c1">// Create an AWS resource (S3 Bucket)
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">var</span> <span class="n">bucket</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bucket</span><span class="o">(</span><span class="s">"my-bucket"</span><span class="o">);</span>
+                </span></span><span class="line"><span class="cl">
+                </span></span><span class="line"><span class="cl">            <span class="c1">// Export the name of the bucket
+                </span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="n">ctx</span><span class="o">.</span><span class="na">export</span><span class="o">(</span><span class="s">"bucketName"</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">bucket</span><span class="o">());</span>
+                </span></span><span class="line"><span class="cl">        <span class="o">});</span>
+                </span></span><span class="line"><span class="cl">    <span class="o">}</span>
+                </span></span><span class="line"><span class="cl"><span class="o">}</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="f8bb3224-fb60-42cb-a58b-c1ca7cd353dd">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="f8bb3224-fb60-42cb-a58b-c1ca7cd353dd"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="yaml" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">quickstart</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">runtime</span><span class="p">:</span><span class="w"> </span><span class="l">yaml</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l">A minimal AWS Pulumi YAML program</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">resources</span><span class="p">:</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># Create an AWS resource (S3 Bucket)</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">my-bucket</span><span class="p">:</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l">aws:s3:Bucket</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">outputs</span><span class="p">:</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="c"># Export the name of the bucket</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">bucketName</span><span class="p">:</span><span class="w"> </span><span class="l">${my-bucket.id}</span><span class="w">
+                </span></span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="b0c0cbde-b6e7-420b-9d36-7814107aea76">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="b0c0cbde-b6e7-420b-9d36-7814107aea76"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><br/><p>Este programa Pulumi crea un nuevo bucket y exporta su nombre.</p><br/><div><pulumi-choosable type="language" values="javascript" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">exports</span><span class="p">.</span><span class="nx">bucketName</span> <span class="o">=</span> <span class="nx">bucket</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="f9c2e398-b8bd-4c9b-a960-1f9608eb089e">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="f9c2e398-b8bd-4c9b-a960-1f9608eb089e"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="typescript" mode=""><!----><div class="active"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-typescript" data-lang="typescript"><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">bucketName</span> <span class="o">=</span> <span class="nx">bucket</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="41861533-13c5-4db2-8cfd-14c27ae2d5e1">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="41861533-13c5-4db2-8cfd-14c27ae2d5e1"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="python" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pulumi</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s1">'bucket_name'</span><span class="p">,</span> <span class="n">bucket</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="e187a98e-578a-489f-bdd7-fa159b84ad5b">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="e187a98e-578a-489f-bdd7-fa159b84ad5b"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="go" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">ctx</span><span class="p">.</span><span class="nf">Export</span><span class="p">(</span><span class="s">"bucketName"</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">.</span><span class="nf">ID</span><span class="p">())</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="00827e87-c752-49d9-97b2-973d82455f04">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="00827e87-c752-49d9-97b2-973d82455f04"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="csharp" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-csharp" data-lang="csharp"><span class="line"><span class="cl"><span class="k">return</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object?</span><span class="p">&gt;</span>
+                </span></span><span class="line"><span class="cl"><span class="p">{</span>
+                </span></span><span class="line"><span class="cl"><span class="na">   ["bucketName"]</span> <span class="p">=</span> <span class="n">bucket</span><span class="p">.</span><span class="n">Id</span>
+                </span></span><span class="line"><span class="cl"><span class="p">};</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="06f64dac-64cf-40fa-89ad-562cbb8112a4">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="06f64dac-64cf-40fa-89ad-562cbb8112a4"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="java" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">ctx</span><span class="o">.</span><span class="na">export</span><span class="o">(</span><span class="s">"bucketName"</span><span class="o">,</span> <span class="n">bucket</span><span class="o">.</span><span class="na">bucket</span><span class="o">());</span>
+                </span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="06fa70cd-c21f-4a35-ae23-b2776c8f53b5">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="06fa70cd-c21f-4a35-ae23-b2776c8f53b5"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div><div><pulumi-choosable type="language" values="yaml" mode=""><!----><div class=""><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">outputs</span><span class="p">:</span><span class="w">
+                </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">bucketName</span><span class="p">:</span><span class="w"> </span><span class="l">${my-bucket.id}</span><span class="w">
+                </span></span></span></code></pre><div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="5cf2a5e7-6d10-47d9-8c0f-9dfaaa9e6dfd">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="5cf2a5e7-6d10-47d9-8c0f-9dfaaa9e6dfd"><span slot="content">Copy</span></span></pulumi-tooltip></div></div></div></pulumi-choosable></div>
+        </div>
+    </div>
+</section>
+
+
+ 
+<section class="py-12 lg:my-12 px-6 lg:px-0 relative home-page-section">
+    <div class=home-page-cloud-section-background>
+        <div class=home-page-cloud-section-image></div>
+    </div>
+    <div class=text-center>
+        <h3><span class="rainbow-text" data-text="Despliegue de Stack">Despliegue de Stack</</span></h3>
+        <br/><br/>
+    </div>
+    <div class="container mx-auto z-10 relative">
+        <div class="w-full lg:w-2/3 mx-auto">              
+                <p>Vamos a desplegar el stack:</p><br/><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="no-select">$ </span>pulumi up</span></span></code></pre>
+                
+                <div class="copy-button-container">    <pulumi-tooltip><!----><span class="tooltip-target" aria-labelledby="9382c473-cfb6-4286-ba83-c59703bb9074">        <button class="copy-button"><i class="far fa-copy copy"></i></button>            </span><span class="tooltip-content" role="tooltip" id="9382c473-cfb6-4286-ba83-c59703bb9074"><span slot="content">Copy</span></span></pulumi-tooltip></div></div>
+                
+                <br/>
+                <p>Este comando evalúa el programa y determina las actualizaciones de recursos que debe realizar. En primer lugar, se muestra una vista previa que describe los cambios que se realizarán al ejecutar la actualización:</p><br/>
+                <pre tabindex="0"><code>Previewing update (dev):
+                
+        Type                 Name            Plan
+    +   pulumi:pulumi:Stack  quickstart-dev  create
+    +   └─ aws:s3:Bucket     my-bucket       create
+
+Resources:
+    + 2 to create
+
+Do you want to perform this update?
+&gt; yes
+  no
+  details
+                </code></pre>
+                
+                <br/><p><font _mstmutation="1">Una vez finalizada la previsualización, se le ofrecen tres opciones entre las que elegir. Elegir "details" le mostrará una rica diff de los cambios a realizar. Elegir "yes" creará su nuevo bucket en el servicio cloud. Elegir "no" devolverá a la pantalla de usuario sin realizar la operación de actualización.</font></p><br/>
+                
+                <pre tabindex="0"><code>Do you want to perform this update? yes
+                Updating (dev):
+                
+        Type                 Name            Status
+    +   pulumi:pulumi:Stack  quickstart-dev  created (4s)
+    +   └─ aws:s3:Bucket     my-bucket       created (2s)
+
+Outputs:
+    bucketName: "my-bucket-58ce361"
+
+Resources:
+    + 2 created
+
+Duration: 5s
+                </code></pre>              
+                
+
+            <div class="note note-info">
+                <div class="icon-and-line"><div class="line"></div></div>
+                <div class="content"><p>Si se está utilizando <a href="https://www.pulumi.com/docs/pulumi-cloud/" target="_blank">Pulumi Cloud backend</a>, puede seguir el enlace "Ver en el navegador" que se muestra la salida de CLI. Esto abrirá la actualización en <a href="https://app.pulumi.com/" target="_blank">Pulumi Cloud</a>, donde puede ver el resultado y explorar los detalles Información sobre del stack, como su actividad, recursos y configuración.</p><a href="./Deploy the Stack _ AWS _ Pulumi Docs_files/console-update.png" ,="" target="_blank"><img src="https://www.pulumi.com/images/getting-started/console-update.png" alt="A stack update with console output, as shown in the Pulumi Service" _mstalt="2581657"></a></div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>
+
+<section class="mt-16 mb-36 relative flex flex-col">
+    <div class="container mx-auto px-3 overflow-hidden lg:overflow-visible">
+        <div class="w-full bg-violet-600 rounded-xl shadow p-16 lg:pb-56 align-top">
+            <h2 class="text-white text-center">Experimentación</h2>
+            <div class="flex flex-col lg:flex-row items-center justify-center mb-4">
+                <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto">Aplicación sin servidor en Google Cloud</p>
+            </div>
+        </div>
+        <div class="w-full order-first lg:hidden">
+            <pulumi-swiper slides=1 centered-slides=true initial-slide=1 loop=false>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">1. Se instaló Pulumi y se configuro las credenciales de Google Cloud.</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/ex1.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">La primera vez al usar pulumi se requirió un token de la cuenta de Pulumi Cloud.</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/ex2.jpg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/ex3.jpg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">2. Se creó un nuevo proyecto de tipo plantilla en C#:</p><br/>
+                            <div class="active" _mstvisible="0"><div class="highlight" _mstvisible="1"><pre tabindex="0" class="chroma" _mstvisible="2"><code class="language-bash" data-lang="bash" _mstvisible="3"><span class="line" _mstvisible="4"><span class="cl" _mstvisible="5"><span class="no-select" _mstvisible="6">$ </span>mkdir my-serverless-app <span class="o" _mstvisible="6">&amp;&amp;</span> <span class="nb" _mstvisible="6">cd</span> my-serverless-app</span></span><span class="line" _mstvisible="4"><span class="cl" _mstvisible="5"><span class="no-select" _mstvisible="6">$ </span>pulumi new serverless-gcp-csharp</span></span></code></pre><div class="copy-button-container" _mstvisible="2">    <pulumi-tooltip _mstvisible="3"><!----><span class="tooltip-target" aria-labelledby="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4">        <button class="copy-button" _mstvisible="5"><i class="far fa-copy copy" _mstvisible="6"></i></button>            </span><span class="tooltip-content" role="tooltip" id="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4"><span slot="content" _msttexthash="76050" _msthash="134" _mstvisible="5">Copiar</span></span></pulumi-tooltip></div></div></div>
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Se completó las indicaciones del asistente para nuevos proyectos. Al terminar, el resultado fue un proyecto completo de Pulumi listo para implementar y configurado con la configuración más común.</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/ex4.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">3. La plantilla no requiere ninguna configuración adicional. Una vez creado el nuevo proyecto, puedes desplegarlo inmediatamente con:</p><br/>
+                            <div class="active" _mstvisible="0"><div class="highlight" _mstvisible="1"><pre tabindex="0" class="chroma" _mstvisible="2"><code class="language-bash" data-lang="bash" _mstvisible="3"><span class="line" _mstvisible="4"><span class="cl" _mstvisible="5"><span class="no-select" _mstvisible="6">$ </span>pulumi up</span></span></code></pre><div class="copy-button-container" _mstvisible="2">    <pulumi-tooltip _mstvisible="3"><!----><span class="tooltip-target" aria-labelledby="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4">        <button class="copy-button" _mstvisible="5"><i class="far fa-copy copy" _mstvisible="6"></i></button>            </span><span class="tooltip-content" role="tooltip" id="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4"><span slot="content" _msttexthash="76050" _msthash="134" _mstvisible="5">Copiar</span></span></pulumi-tooltip></div></div></div>
+                            <br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/ex5.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Si accedemos a la URL del sitio, podemos ver la aplicación desplegada:</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/ex6.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Opcionalmente, en Pulumi Cloud podemos ver mas información del despliegue:</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/7.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">4. Revisando codigo, la disposicion del proyecto es:</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/8.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Pulumi.dev.yaml:</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/9.png alt=".">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Pulumi.yaml:</p><br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/10.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">5. Una vez realizado cambios en el projecto, se pueden implementar los cambios usando</p><br/>
+                            <div class="active" _mstvisible="0"><div class="highlight" _mstvisible="1"><pre tabindex="0" class="chroma" _mstvisible="2"><code class="language-bash" data-lang="bash" _mstvisible="3"><span class="line" _mstvisible="4"><span class="cl" _mstvisible="5"><span class="no-select" _mstvisible="6">$ </span>pulumi up</span></span></code></pre><div class="copy-button-container" _mstvisible="2">    <pulumi-tooltip _mstvisible="3"><!----><span class="tooltip-target" aria-labelledby="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4">        <button class="copy-button" _mstvisible="5"><i class="far fa-copy copy" _mstvisible="6"></i></button>            </span><span class="tooltip-content" role="tooltip" id="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4"><span slot="content" _msttexthash="76050" _msthash="134" _mstvisible="5">Copiar</span></span></pulumi-tooltip></div></div></div>
+                            <br/>
+                            <img class="mx-auto w-full" src=https://raw.githubusercontent.com/JimHuertas/pulumi-template/0e4c0752a347f69cd9ce74353ca497f72515837b/wwwroot/images/exp/11.png alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Pulumi ejecutará el paso de la actualización, que calcula el cambio mínimamente disruptivo para lograr el estado deseado descrito por el programa. Al elegir YES, se procederá con la actualización y se cargará el archivo en el bucket:</p><br/>
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+            </pulumi-swiper>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto my-1 px-6">
+    <div class="flex justify-center">
+        <img src="https://gifsec.com/wp-content/uploads/2022/09/thank-you-gif-1.gif" alt="A stack update with console output, as shown in the Pulumi Service" _mstalt="2581657">
+    </div>
+</section>
+
 </main>
 <nav class=footer>
     <div class="w-full h-16 lg:h-32">
         <div class="dot-background no-animate"></div>
     </div>
     <div class="container mx-auto">
-        <div class=footer-nav-container>
-            <div class="hidden md:w-1/12"></div>
-            <ul>
-                <li>
-                    <a data-track=footer-get-started href=/docs/get-started/ class=link>Get Started</a>
-                </li>
-                <li>
-                    <a data-track=footer-install href=/docs/install/ class=link>Install</a>
-                </li>
-                <li>
-                    <a data-track=footer-documentation href=/docs/ class=link>Documentation</a>
-                </li>
-                <li>
-                    <a data-track=footer-apis href=/registry/ class=link>Registry</a>
-                </li>
-                <li>
-                    <a data-track=public-roadmap href=https://github.com/orgs/pulumi/projects/44/ class=link>Public Roadmap</a>
-                </li>
-                <li>
-                    <a data-track=footer-security href=/security/ class=link>Security</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a data-track=footer-enterprise href=/enterprise/ class=link>Enterprise</a>
-                </li>
-                <li>
-                    <a data-track=footer-aws href=/aws/ class=link>AWS</a>
-                </li>
-                <li>
-                    <a data-track=footer-azure href=/azure/ class=link>Azure</a>
-                </li>
-                <li>
-                    <a data-track=footer-gcp href=/gcp/ class=link>Google Cloud</a>
-                </li>
-                <li>
-                    <a href=/containers/ class=link>Containers</a>
-                </li>
-                <li>
-                    <a href=/serverless/ class=link>Serverless</a>
-                </li>
-                <li>
-                    <a href=/kubernetes/ class=link>Kubernetes</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a data-track=footer-about-us href=/about/ class=link>About Us</a>
-                </li>
-                <li>
-                    <a data-track=footer-contact-us href=/request-a-demo/ class=link>Request a Demo</a>
-                </li>
-                <li>
-                    <a data-track=footer-contact-us href=/contact/ class=link>Talk to a human</a>
-                </li>
-                <li>
-                    <a data-track=footer-support href=https://support.pulumi.com/ class=link>Support</a>
-                </li>
-                <li>
-                    <a data-track=footer-careers href=/careers/ class=link>Careers</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a data-track=footer-events href=/resources/ class=link>Resources</a>
-                </li>
-                <li>
-                    <a data-track=footer-events href=https://archive.pulumi.com/ target=_blank rel="noopener noreferrer" class=link>Slack Archive</a>
-                </li>
-                <li>
-                    <a data-track=footer-events href=/case-studies/ class=link>Case Studies</a>
-                </li>
-                <li>
-                    <a data-track=footer-events href=/awards/ class=link>Awards & Recognitions</a>
-                </li>
-                <li>
-                    <a data-track=footer-brand href=/brand/ class=link>Brand Resources</a>
-                </li>
-            </ul>
-        </div>
-        <div class="border mt-16"></div>
-        <section class="py-8 px-4">
-            <div class="container mx-auto">
-                <div class="flex justify-center flex-col flex-row text-center">
-                    <h4>Sign up for our newsletter</h4>
-                    <div class="flex justify-center my-3">
-                        <pulumi-hubspot-form form-id=027b4c6d-9b73-4ad8-b149-3c8b07fff608 class="newsletter newsletter-dark-border"></pulumi-hubspot-form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <ul class="py-8 flex flex-col text-center md:text-left md:flex-row md:justify-center">
-            <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
-                <a class=link data-track=footer-legal-trademark-usage href=/trademark/>Trademark Usage</a>
-            </li>
-            <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
-                <a class=link data-track=footer-legal-acceptable-use-policy href=/acceptable-use/>Acceptable Use Policy</a>
-            </li>
-            <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
-                <a class=link data-track=footer-legal-terms-conditions href=/terms-and-conditions/>Terms & Conditions</a>
-            </li>
-            <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
-                <a class=link data-track=footer-legal-privacy-policy href=/privacy/>Privacy Policy</a>
-            </li>
-            <li class="mr-2 mb-4 lg:mb-0 lg:mr-8 font-semibold">
-                <a class=link data-track=footer-legal-professional-services-agreement href=/professional-services-agreement/>Professional Services Agreement</a>
-            </li>
-        </ul>
+        <br/>
         <div class="text-center mb-8">
-            <p class="text-black mb-8">&copy;2023 Pulumi</p>
             <ul class="flex inline-items text-2xl justify-center">
-                <li class=mr-8>
-                    <a data-track=footer-twitter href=https://twitter.com/pulumicorp target=_blank>
-                        <img class=h-6 src=./logos/tech/twitter.svg alt="Pulumi Twitter">
-                    </a>
-                </li>
-                <li class=mr-8>
-                    <a data-track=footer-slack href=https://slack.pulumi.com/ target=_blank>
-                        <img class=h-6 src=./logos/tech/slack.svg alt="Pulumi Slack">
-                    </a>
-                </li>
-                <li class=mr-8>
-                    <a data-track=footer-linkedin href=https://www.linkedin.com/company/pulumi/ target=_blank>
-                        <img class=h-6 src=./logos/tech/linkedin.svg alt="Pulumi LinkedIn">
-                    </a>
-                </li>
-                <li class=mr-8>
-                    <a data-track=footer-youtube href=https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw target=_blank>
-                        <img class=h-6 src=./logos/tech/youtube.svg alt="Pulumi YouTube">
-                    </a>
-                </li>
                 <li>
                     <a data-track=footer-github href=https://github.com/pulumi/ target=_blank>
                         <img class=h-6 src=./logos/tech/github.svg alt="Pulumi Github">

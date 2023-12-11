@@ -393,6 +393,22 @@ body.dark,body[data-theme=dark] {
     padding: calc(var(--aa-spacing-half)/2)
 }
 
+
+.fa,.fas,pulumi-convert #editors .btn-convert .icon,pulumi-convert #editors .btn-convert.converting .icon,pulumi-convert #editors .editor .status-bar .alert .toggle .icon,pulumi-convert #editors .editor .status-bar.converting .icon,pulumi-convert #editors .editor .status-bar.error .icon,pulumi-convert #editors .editor .status-bar.success .icon,pulumi-convert #editors .editor .status-bar.warn .icon,pulumi-convert #editors .editor .tabs .actions .btn-copy,pulumi-convert #editors .editor .tabs .actions .btn-download,pulumi-convert #editors .editor.editor-output .editor-spinner,pulumi-greenhouse-jobs-list .loading-spinner {
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900
+}
+
+.fa,.fab,.far,.fas,pulumi-convert #editors .btn-convert .icon,pulumi-convert #editors .btn-convert.converting .icon,pulumi-convert #editors .editor .status-bar .alert .toggle .icon,pulumi-convert #editors .editor .status-bar.converting .icon,pulumi-convert #editors .editor .status-bar.error .icon,pulumi-convert #editors .editor .status-bar.success .icon,pulumi-convert #editors .editor .status-bar.warn .icon,pulumi-convert #editors .editor .tabs .actions .btn-copy,pulumi-convert #editors .editor .tabs .actions .btn-download,pulumi-convert #editors .editor.editor-output .editor-spinner,pulumi-greenhouse-jobs-list .loading-spinner {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto
+}
+
 .aa-Item[aria-selected=true] {
     background-color: rgba(179,173,214,.205);
     background-color: rgba(var(--aa-selected-color-rgb),var(--aa-selected-color-alpha))
