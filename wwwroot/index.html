@@ -1712,9 +1712,7 @@ Managed to automate deploying a website created with said builder with @PulumiCo
             <div class="card bg-white shadow-xl p-6 block">
                 <div>
                     <pulumi-chooser type=language options=macos,linux,windows>
-                        <pulumi-choosable type=language class=highlight value=macos>
-                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
-                        
+                        <pulumi-choosable type=language class=highlight value=macos>                        
                             <ul>
                                 <li>
                                     <p class="no-anchor pt-4">Homebrew Package Manager</p>
@@ -2135,14 +2133,75 @@ Duration: 5s
     
 </section>
 
-<section class="container mx-auto my-24 px-6">
-    <div class="flex justify-center">
-        <div class="card ready-cta w-full rounded-xl p-1 gradient">
-            <div class="flex justify-center rounded-xl bg-purple-100">
-                <div class="p-8 md:p-16 lg:pt-28 lg:pb-28 inline-flex flex-col items-center">
-                    <h2 class="mb-12 text-center">Gracias por su atención!</h2>                    
-                </div>
+<section class="mt-16 mb-36 relative flex flex-col">
+    <div class="container mx-auto px-3 overflow-hidden lg:overflow-visible">
+        <div class="w-full bg-violet-600 rounded-xl shadow p-16 lg:pb-56 align-top">
+            <h2 class="text-white text-center">Experimentación</h2>
+            <div class="flex flex-col lg:flex-row items-center justify-center mb-4">
+                <p class="text-white text-lg mx-auto my-0 lg:mx-0 lg:my-auto">Aplicación sin servidor en Google Cloud</p>
             </div>
+        </div>
+        <div class="w-full order-first lg:hidden">
+            <pulumi-swiper slides=1 centered-slides=true initial-slide=1 loop=false autoplay autoplay-delay=5000 speed=1000>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">1. Se instaló Pulumi y se configuro las credenciales de Google Cloud.</p><br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">La primera vez al usar pulumi se requirió un token de la cuenta de Pulumi Cloud.</p><br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">2. Se creó un nuevo proyecto de tipo plantilla en C#:</p><br/>
+                            <div class="active" _mstvisible="0"><div class="highlight" _mstvisible="1"><pre tabindex="0" class="chroma" _mstvisible="2"><code class="language-bash" data-lang="bash" _mstvisible="3"><span class="line" _mstvisible="4"><span class="cl" _mstvisible="5"><span class="no-select" _mstvisible="6">$ </span>mkdir my-serverless-app <span class="o" _mstvisible="6">&amp;&amp;</span> <span class="nb" _mstvisible="6">cd</span> my-serverless-app</span></span><span class="line" _mstvisible="4"><span class="cl" _mstvisible="5"><span class="no-select" _mstvisible="6">$ </span>pulumi new serverless-gcp-csharp</span></span></code></pre><div class="copy-button-container" _mstvisible="2">    <pulumi-tooltip _mstvisible="3"><!----><span class="tooltip-target" aria-labelledby="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4">        <button class="copy-button" _mstvisible="5"><i class="far fa-copy copy" _mstvisible="6"></i></button>            </span><span class="tooltip-content" role="tooltip" id="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4"><span slot="content" _msttexthash="76050" _msthash="134" _mstvisible="5">Copiar</span></span></pulumi-tooltip></div></div></div>
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Se completó las indicaciones del asistente para nuevos proyectos. Al terminar, el resultado fue un proyecto completo de Pulumi listo para implementar y configurado con la configuración más común.</p><br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">3. La plantilla no requiere ninguna configuración adicional. Una vez creado el nuevo proyecto, puedes desplegarlo inmediatamente con:</p><br/>
+                            <div class="active" _mstvisible="0"><div class="highlight" _mstvisible="1"><pre tabindex="0" class="chroma" _mstvisible="2"><code class="language-bash" data-lang="bash" _mstvisible="3"><span class="line" _mstvisible="4"><span class="cl" _mstvisible="5"><span class="no-select" _mstvisible="6">$ </span>pulumi up</span></span></code></pre><div class="copy-button-container" _mstvisible="2">    <pulumi-tooltip _mstvisible="3"><!----><span class="tooltip-target" aria-labelledby="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4">        <button class="copy-button" _mstvisible="5"><i class="far fa-copy copy" _mstvisible="6"></i></button>            </span><span class="tooltip-content" role="tooltip" id="3657ca08-386a-4a7a-8d6a-8646932883f1" _mstvisible="4"><span slot="content" _msttexthash="76050" _msthash="134" _mstvisible="5">Copiar</span></span></pulumi-tooltip></div></div></div>
+                            <br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">Pulumi Cloud:</p><br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">4. Revisando codigo</p><br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <p class="text-left mt-0 overflow-hidden">3. La plantilla no requiere ninguna configuración adicional. Una vez creado el nuevo proyecto, puedes desplegarlo inmediatamente con:</p><br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+                <pulumi-swipeable>
+                    <div class="w-full px-4">
+                        <div class="flex flex-col card p-6 bg-white">
+                            <p class="text-left mt-0 overflow-hidden">5. Realizando cambios</p><br/>
+                            <img class="mx-auto w-full" src=./images/home/typescript.svg alt="Pulumi code being written in TypeScript showing autocomplete for creating a new S3 bucket">
+                            <br/>
+                        </div>
+                    </div>
+                </pulumi-swipeable>
+            </pulumi-swiper>
         </div>
     </div>
 </section>
@@ -2161,7 +2220,6 @@ Duration: 5s
     <div class="container mx-auto">
         <br/>
         <div class="text-center mb-8">
-            <p class="text-black mb-8">CLOUD COMPUTING - CIENCIA DE LA COMPUTACI&Oacute;N</p>
             <ul class="flex inline-items text-2xl justify-center">
                 <li>
                     <a data-track=footer-github href=https://github.com/pulumi/ target=_blank>
