@@ -6564,12 +6564,12 @@ ul.glossary {
 
 @media (min-width: 1024px) {
     .home-page-hero {
-        height:24rem
+        height:40rem
     }
 }
 
 .home-page-hero-container {
-    height: 80%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -6577,7 +6577,7 @@ ul.glossary {
     background-image: url(../images/home/hero-background.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80%;
+    height: 100%;
     overflow: hidden;
     width: 100%
 }
